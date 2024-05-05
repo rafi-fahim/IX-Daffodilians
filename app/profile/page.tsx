@@ -34,13 +34,15 @@ const page = () => {
   const { isSignedIn, user, isLoaded } = useUser();
   const [userData, setUserData] = useState<userData>();
   const [loading, setLoading] = useState<boolean>(true);
+  const [uid, setUid] = useState<string>()
   const [error, setError] = useState<boolean>(false);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         if (user) {
-          getDoc(doc(db, "students", `${removeLastWord(user.username!)}`))
+          setUid(removeLastWord(user.username))
+          getDoc(doc(db, "students", `${uid}`))
             .then(data => {
                 setUserData(data.data() as userData);
             })

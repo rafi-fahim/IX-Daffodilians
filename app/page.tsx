@@ -1,7 +1,10 @@
+import LandingArea from "@/components/LandingArea";
 import Image from "next/image";
 
 export default function Home() {
   return (
-   <div></div>
+   <div className="">
+      <LandingArea />
+   </div>
   );
 }

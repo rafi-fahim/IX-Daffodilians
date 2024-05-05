@@ -15,6 +15,11 @@ const config: Config = {
         "theme-color-4" : "#93B1A6",
       }
     },
+    fontFamily: {
+      'rubik-fancy': '"Rubik Vinyl", "system-ui"',
+      'fancy': '"Tourney", sans-serif',
+      'jersey': '"Jersey 25", sans-serif'
+    },
   },
   plugins: [],
 };
