@@ -41,7 +41,7 @@ const page = () => {
     const fetchData = async () => {
       try {
         if (user) {
-          setUid(removeLastWord(user.username))
+          setUid(removeLastWord(user.username!))
           getDoc(doc(db, "students", `${uid}`))
             .then(data => {
                 setUserData(data.data() as userData);
